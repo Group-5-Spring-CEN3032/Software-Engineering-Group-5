@@ -30,6 +30,9 @@ public class PlayerMovementController : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown("escape")) { PausingManager.TogglePause(); }
+        if (PausingManager.isPaused()) return;
+
         // Camera movement
         float x = Input.GetAxis("Mouse X") * mouseSensitivity.x * degreesPerSecondLookSpeed * Time.deltaTime;
         float y = Input.GetAxis("Mouse Y") * mouseSensitivity.y * degreesPerSecondLookSpeed * Time.deltaTime;
