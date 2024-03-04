@@ -21,6 +21,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float timeBetweenJumps = 1f;
 
+    [SerializeField] private float groundDetectionDistance = 0.25f;
+
     //Calculation variables, do not access
     private float timeSinceLastJump;
 
@@ -61,9 +63,9 @@ public class PlayerMovementController : MonoBehaviour
         body.AddForce(rotatedMovementDir * movementMult * Time.deltaTime, ForceMode.VelocityChange);
 
         //Jumping
-        if (timeSinceLastJump > timeBetweenJumps && Input.GetAxisRaw("Jump") > 0.5f)
+        if (IsOnGround() && timeSinceLastJump > timeBetweenJumps && Input.GetAxisRaw("Jump") > 0.5f)
         {
-            body.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            body.AddForce(Vector3.up * jumpForce * body.mass, ForceMode.Impulse);
             timeSinceLastJump = 0f;
         }
     }
@@ -72,6 +74,12 @@ public class PlayerMovementController : MonoBehaviour
     void FixedUpdate()
     {
         timeSinceLastJump += Time.fixedDeltaTime;
+    }
+
+    bool IsOnGround()
+    {
+        Vector3 origin = transform.position + (Vector3.down * 0.99f);
+        return Physics.Raycast(new Ray(origin, Vector3.down), groundDetectionDistance);
     }
 
 }

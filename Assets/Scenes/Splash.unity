@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1
-  nextScene: SampleScene
+  nextScene: MainMenu
 --- !u!4 &1427777687
 Transform:
   m_ObjectHideFlags: 0
