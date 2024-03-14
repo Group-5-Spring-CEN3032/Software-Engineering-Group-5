@@ -26,19 +26,19 @@ public class Player : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(Input.GetKeyDown("d"))
+        if(Input.GetKeyDown("f"))
         {
             float num = -20f;
             stats.SetStat(num, "health", bar);
         }
 
-        if(Input.GetKeyDown("f"))
+        if(Input.GetKeyDown("g"))
         {
             float num = -20f;
             stats.SetStat(num, "mana", bar2);
         }
 
-        if(Input.GetKeyDown("g"))
+        if(Input.GetKeyDown("h"))
         {
             float num = -20f;
             stats.SetStat(num, "stamina", bar3);
