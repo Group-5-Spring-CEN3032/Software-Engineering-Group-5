@@ -1,4 +1,15 @@
 # Software Engineering Group 5: First-Person RPG Framework
+- Nicholas Eriser, Mathew Kucinski, Michael Marlowe, Evan Overly
+
+For Software Engineering II - CEN3032 202401
+
+Our First Person RolePlaying Game Framework is a set of ready-to-use scripts and gameobjects to streamline independent roleplaying game development in Unity3D.
+
+## Documentation
+All API documentation has been made using in-code documentation comments. Using Visual Studio, API documentation will be automatically generated and provided when accessing the API in code.
+
+Our user manual is available at [group-5-spring-cen3032.github.io/Project-Documentation/](https://group-5-spring-cen3032.github.io/Project-Documentation/)
+
 
 ## Project Setup Instructions
 To ensure you can run and work on the project you'll need to install the correct version of Unity. Download and Install [Unity Hub](https://unity.com/unity-hub), it will handle installation for you. (You will need a free Unity account in order to use Unity Hub.)
