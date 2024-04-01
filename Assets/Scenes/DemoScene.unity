@@ -5086,6 +5086,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3641522900448860648, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641522900448860648, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641522900448860648, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4642902624440072459, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
       propertyPath: attackPower
       value: 10
@@ -5132,6 +5144,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117087141929470005, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713781206298884895, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: valueOnPause
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5612,6 +5628,10 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 2049425542}
+    - target: {fileID: 5232727023851237642, guid: fb412dd09e395754482c372f89590d4f, type: 3}
+      propertyPath: visibility
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6532206022725727251, guid: fb412dd09e395754482c372f89590d4f, type: 3}
       propertyPath: m_Name
       value: NPC
