@@ -8,7 +8,7 @@ public class Stats : MonoBehaviour
     /// variables that are need
     /// set these variables in the unity engine
     /// </summary>
-    public float health, maxHealth, mana, maxMana, stamina, maxStamina, attackPower;
+    public float health, maxHealth, mana, maxMana, stamina, maxStamina;
 
     /// <summary>
     /// Getter and setter for health
@@ -65,16 +65,6 @@ public class Stats : MonoBehaviour
     }
 
     /// <summary>
-    /// Getter and setter for attack power
-    /// </summary>
-
-    public float AttackPower
-    {
-        get { return attackPower; }
-        set { attackPower = value; }
-    }
-
-    /// <summary>
     /// This is were the type of stat and the stat change is taken in an calculte the new stat total and sends it to the right bar to get updated.
     /// </summary>
     /// <param name="statChange">The amount the stat will change</param>
@@ -83,19 +73,19 @@ public class Stats : MonoBehaviour
     {
         if(string.Compare(stat,"health") == 0)
         {
-          Health = Health - statChange;
+          Health = Health + statChange;
           Health = Mathf.Clamp(Health, 0, MaxHealth);
           bar.SetStat(Health);
         }
         else if(string.Compare(stat,"mana") == 0)
         {
-            Mana = Mana - statChange;
+            Mana = Mana + statChange;
             Mana = Mathf.Clamp(Mana, 0, MaxMana);
             bar.SetStat(Mana);
         }
         else if(string.Compare(stat,"stamina") == 0)
         {
-            Stamina = Stamina - statChange;
+            Stamina = Stamina + statChange;
             Stamina = Mathf.Clamp(Stamina, 0, MaxStamina);
             bar.SetStat(Stamina);
         }
