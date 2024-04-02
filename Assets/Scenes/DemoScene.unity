@@ -5624,6 +5624,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1586517634086354720, guid: fb412dd09e395754482c372f89590d4f, type: 3}
+      propertyPath: maxStamina
+      value: 218.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5232727023851237642, guid: fb412dd09e395754482c372f89590d4f, type: 3}
       propertyPath: stats
       value: 
