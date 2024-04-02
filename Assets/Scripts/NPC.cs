@@ -7,16 +7,19 @@ public class NPC : MonoBehaviour
     /// <summary>
     /// variables that are need
     /// </summary>
-    [SerializeField]
     private BarUI bar;
-    [SerializeField]
     private Stats stats;
     [SerializeField]
     bool visibility;
+    Transform canvasTransform;
+    Transform barTransform;
 
     // Start is called before the first frame update
     void Start()
     {
+        canvasTransform = transform.Find("Canvas");
+        barTransform = canvasTransform.Find("Healthbar");
+        bar = barTransform.GetComponent<BarUI>();
         stats = GetComponent<Stats>();
         bar.SetMaxStat(stats.MaxHealth);
         bar.gameObject.SetActive(visibility);
