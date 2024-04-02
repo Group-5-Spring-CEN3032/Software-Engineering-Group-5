@@ -14,7 +14,7 @@ public class NPC : MonoBehaviour
     Transform canvasTransform;
     Transform barTransform;
 
-    // Start is called before the first frame update 
+    // Start is called before the first frame update
     void Start()
     {
         canvasTransform = transform.Find("Canvas");

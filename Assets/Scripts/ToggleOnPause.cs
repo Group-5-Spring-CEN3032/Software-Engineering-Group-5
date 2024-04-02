@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Automatically toggles the attached gameobject to be attached based on the pausing state.
@@ -10,6 +9,7 @@ public class ToggleOnPause : MonoBehaviour
 {
     public bool valueOnPause = true;
 
+    
     void Start()
     {
         // Adds callbacks to fire when the pause manager triggers a pause.
@@ -37,6 +37,5 @@ public class ToggleOnPause : MonoBehaviour
     {
         gameObject.SetActive(!valueOnPause);
     }
-
 
 }
