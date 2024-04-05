@@ -8,7 +8,7 @@ public class Stats : MonoBehaviour
     /// variables that are need
     /// set these variables in the unity engine
     /// </summary>
-    public float health, maxHealth, mana, maxMana, stamina, maxStamina, attackPower;
+    private float health, maxHealth, mana, maxMana, stamina, maxStamina, attackPower;
 
     /// <summary>
     /// Getter and setter for health
