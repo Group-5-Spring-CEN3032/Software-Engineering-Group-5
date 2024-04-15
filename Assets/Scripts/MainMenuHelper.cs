@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+/// <summary>
+/// Helper component to provide scene loading and game quiting access as public functions.
+/// </summary>
+public class MainMenuHelper : MonoBehaviour
 {
     public string sceneName;
     public void LoadScene() {

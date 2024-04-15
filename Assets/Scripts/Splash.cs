@@ -13,6 +13,7 @@ public class Splash : MonoBehaviour
     [SerializeField] private string nextScene = "SampleScene";
     void Start()
     {
+        delay = Mathf.Clamp(delay, 0f, Mathf.Infinity);
        StartCoroutine(LoadNextScene());
     }
 

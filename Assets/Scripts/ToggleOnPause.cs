@@ -28,12 +28,12 @@ public class ToggleOnPause : MonoBehaviour
         PausingManager.onUnpauseCallback -= OnUnpause;
     }
 
-    public void OnPause()
+    private void OnPause()
     {
         gameObject.SetActive(valueOnPause);
     }
 
-    public void OnUnpause()
+    private void OnUnpause()
     {
         gameObject.SetActive(!valueOnPause);
     }

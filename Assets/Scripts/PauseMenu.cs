@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(ToggleOnPause))]
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;

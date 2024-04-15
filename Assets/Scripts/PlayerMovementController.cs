@@ -12,15 +12,12 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private Transform cameraAxis;
     [SerializeField] private Vector2 mouseSensitivity = Vector2.one;
     [SerializeField] private float degreesPerSecondLookSpeed = 30f;
-    [SerializeField] private float maxAngle = 40f;
-    [SerializeField] private float minAngle = -40f;
-    [SerializeField] private float offset = 90f;
+    [SerializeField] private float maxCameraAngle = 40f;
+    [SerializeField] private float minCameraAngle = -40f;
+    [SerializeField] private float cameraAngleOffset = 90f;
     [SerializeField] private float movementMult = 1f;
-
-
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float timeBetweenJumps = 1f;
-
     [SerializeField] private float groundDetectionDistance = 0.25f;
 
     //Calculation variables, do not access
@@ -45,7 +42,7 @@ public class PlayerMovementController : MonoBehaviour
 
         //extract and clamp camera vertical rotation
         Vector3 camRot = cameraAxis.localRotation.eulerAngles;
-        camRot.x = Mathf.Clamp(camRot.x, minAngle + offset, maxAngle + offset);
+        camRot.x = Mathf.Clamp(camRot.x, minCameraAngle + cameraAngleOffset, maxCameraAngle + cameraAngleOffset);
 
         //Reassigning clamped camera rotation.
         Quaternion newCamQuat = new Quaternion();

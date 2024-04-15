@@ -40,7 +40,7 @@ public class Attacking : MonoBehaviour
     void LaunchProjectile()
     {
         var bullet = Instantiate(projectile, firePosition.position, firePosition.rotation);
-        bullet.GetComponent<projectile>().SetDamage(stats.AttackPower);
+        bullet.GetComponent<Projectile>().SetDamage(stats.AttackPower);
         bullet.GetComponent<Rigidbody>().velocity = firePosition.forward * speed;
     }
 }

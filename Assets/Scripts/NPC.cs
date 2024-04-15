@@ -10,19 +10,20 @@ public class NPC : MonoBehaviour
     private BarUI bar;
     private Stats stats;
     [SerializeField]
-    bool visibility;
-    Transform canvasTransform;
-    Transform barTransform;
+    bool healthbarVisibility;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        Transform canvasTransform;
+        Transform barTransform;
         canvasTransform = transform.Find("Canvas");
         barTransform = canvasTransform.Find("Healthbar");
         bar = barTransform.GetComponent<BarUI>();
         stats = GetComponent<Stats>();
         bar.SetMaxStat(stats.MaxHealth);
-        bar.gameObject.SetActive(visibility);
+        bar.gameObject.SetActive(healthbarVisibility);
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class NPC : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if(visibility == true)
+        if(healthbarVisibility == true)
         {
             stats.SetStat(damage, "health", bar);
 
