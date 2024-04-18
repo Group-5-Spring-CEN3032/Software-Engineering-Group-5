@@ -2,47 +2,43 @@ using Palmmedia.ReportGenerator.Core.Common;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Windows;
 
 [ExecuteInEditMode]
-public class PersistentClass : MonoBehaviour
+public abstract class PersistentClass<TargetType> : MonoBehaviour
 {
     [SerializeField] private string uuid;
-    public string UUID { 
-        set {
-            uuid = value;
-        } 
-        get { 
-            if (uuid == null || uuid == "") { uuid = GenerateUUID(); }
-            return uuid; 
-        } 
-        
-    }
 
-    public void OnSerialize(object target)
+    public string GetUUID()
     {
-        string json = JsonUtility.ToJson(target);
-        string filename = target.GetType() + "-" + UUID + ".json";
-        string directory = Application.persistentDataPath + "/persistence/";
-        string path = directory + filename;
-        Debug.Log(json);
-        Debug.Log(filename);
-        Debug.Log(directory);
-        Debug.Log(path);
-        UnicodeEncoding e = new UnicodeEncoding();
-        if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
-        File.WriteAllBytes(path, e.GetBytes(json.ToCharArray()));
+        if (uuid == null || uuid == "") { uuid = GenerateUUID(); }
+        return uuid;
     }
 
-    public void OnDeserialize()
+    public void Serialize(TargetType obj)
     {
-        
+        string plaintext = JsonUtility.ToJson(obj);
+        StreamWriter sw = new StreamWriter(GetFilePath());
+        sw.Write(plaintext);
+        sw.Close();
     }
 
-    
+    public TargetType Deserialize()
+    {
+        //TODO check if file exists
+
+        StreamReader sr = new StreamReader(GetFilePath());
+        string plaintext = sr.ReadToEnd();
+        sr.Close();
+        TargetType obj = JsonUtility.FromJson<TargetType>(plaintext);
+        return obj;
+    }
+
+    string GetFilePath() { return Application.persistentDataPath + "/persistence/" + typeof(TargetType) + "-" + GetUUID(); }
 
     string GenerateUUID()
     {

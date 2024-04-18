@@ -3083,7 +3083,6 @@ GameObject:
   - component: {fileID: 592176886}
   - component: {fileID: 592176885}
   - component: {fileID: 592176892}
-  - component: {fileID: 592176891}
   - component: {fileID: 592176890}
   m_Layer: 0
   m_Name: Pushable Cube
@@ -3217,19 +3216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9149613f9bb63544fb56cc69f9ab4353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &592176891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592176884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ca6be19b8c7be44b7f45032db0ce04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uuid: 8301780082150604800
+  uuid: 
 --- !u!208 &592176892
 NavMeshObstacle:
   m_ObjectHideFlags: 0
