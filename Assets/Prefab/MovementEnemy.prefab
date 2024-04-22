@@ -372,6 +372,8 @@ GameObject:
   - component: {fileID: 4855476074888748095}
   - component: {fileID: 5540632913378161682}
   - component: {fileID: -4683993565834765745}
+  - component: {fileID: 4164224701153492451}
+  - component: {fileID: 7651333807612574668}
   m_Layer: 0
   m_Name: MovementEnemy
   m_TagString: Untagged
@@ -387,8 +389,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7060196989782407592}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.4, y: 2.9, z: -37.1}
+  m_LocalRotation: {x: 0, y: -0.4591517, z: 0, w: 0.8883579}
+  m_LocalPosition: {x: 18.785347, y: 1.0399995, z: -29.07052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -517,13 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9103e8fc58a153d45a1142617d271b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  mana: 100
-  maxMana: 100
-  stamina: 100
-  maxStamina: 100
-  attackPower: 0
 --- !u!114 &-4683993565834765745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,6 +531,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdee8d313d441fa4d9f2545f33e1b80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  stats: {fileID: 0}
-  visibility: 0
+  healthbarVisibility: 0
+--- !u!114 &4164224701153492451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060196989782407592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9149613f9bb63544fb56cc69f9ab4353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 
+--- !u!114 &7651333807612574668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060196989782407592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3487f01f142a1ea43bf1086c372338c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 

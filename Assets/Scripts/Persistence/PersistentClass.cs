@@ -24,7 +24,8 @@ public abstract class PersistentClass<TargetType> : MonoBehaviour
     public TargetType Deserialize()
     {
         //TODO check if file exists
-
+        FileInfo f = new FileInfo(GetFilePath());
+        if (!f.Exists) return default(TargetType);
         StreamReader sr = new StreamReader(GetFilePath());
         string plaintext = sr.ReadToEnd();
         sr.Close();
