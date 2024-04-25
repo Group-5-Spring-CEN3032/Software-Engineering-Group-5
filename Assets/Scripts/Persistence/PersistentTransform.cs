@@ -1,12 +1,12 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class PersistentTransform : PersistentClass<TransformStruct>
 {
 
     void OnEnable()
     {
-        Deserialize().Apply(transform);
+        TransformStruct t = Deserialize();
+        if (t != null) t.Apply(transform);
     }
 
     void OnDisable()
@@ -15,7 +15,7 @@ public class PersistentTransform : PersistentClass<TransformStruct>
     }
 }
 
-public struct TransformStruct
+public class TransformStruct
 {
     public Vector3 postion;
     public Quaternion rotation;

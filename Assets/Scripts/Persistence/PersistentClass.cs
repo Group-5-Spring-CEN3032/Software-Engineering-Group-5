@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public abstract class PersistentClass<TargetType> : MonoBehaviour
 
     public void Serialize(TargetType obj)
     {
+        if (!Application.isPlaying) return;
         string plaintext = JsonUtility.ToJson(obj);
         StreamWriter sw = new StreamWriter(GetFilePath());
         sw.Write(plaintext);

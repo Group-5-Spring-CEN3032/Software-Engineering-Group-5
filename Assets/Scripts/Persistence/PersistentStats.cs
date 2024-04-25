@@ -16,7 +16,7 @@ public class PersistentStats : PersistentClass<PersistentStatsData>
     void OnEnable()
     {
         PersistentStatsData d = Deserialize();
-        if (d != default(PersistentStatsData)) d.Apply(s);
+        if (d != null) d.Apply(s);
     }
 
     void OnDisable()

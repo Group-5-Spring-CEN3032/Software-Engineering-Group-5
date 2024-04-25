@@ -26,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
     // FixedUpdate is called every physics iteration
     void FixedUpdate()
     {
+        if (!myAgent.isOnNavMesh) return;
         if (state == MovementState.Random)
         {
             if (myAgent.remainingDistance <= myAgent.stoppingDistance)
@@ -34,14 +35,14 @@ public class EnemyMovement : MonoBehaviour
                 if (RandomPoint(centrePoint.position, range, out point))
                 {
                     Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    if (myAgent.isOnNavMesh) myAgent.SetDestination(point);
+                    myAgent.SetDestination(point);
                 }
             }
         }
 
         if (state == MovementState.Following)
         {
-            if (myAgent.isOnNavMesh) myAgent.SetDestination(playerTransform.position);
+            myAgent.SetDestination(playerTransform.position);
         }
     }
 
