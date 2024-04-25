@@ -34,14 +34,14 @@ public class EnemyMovement : MonoBehaviour
                 if (RandomPoint(centrePoint.position, range, out point))
                 {
                     Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    myAgent.SetDestination(point);
+                    if (myAgent.isOnNavMesh) myAgent.SetDestination(point);
                 }
             }
         }
 
         if (state == MovementState.Following)
         {
-            myAgent.SetDestination(playerTransform.position);
+            if (myAgent.isOnNavMesh) myAgent.SetDestination(playerTransform.position);
         }
     }
 

@@ -23,7 +23,6 @@ public abstract class PersistentClass<TargetType> : MonoBehaviour
 
     public TargetType Deserialize()
     {
-        //TODO check if file exists
         FileInfo f = new FileInfo(GetFilePath());
         if (!f.Exists) return default(TargetType);
         StreamReader sr = new StreamReader(GetFilePath());
@@ -33,15 +32,10 @@ public abstract class PersistentClass<TargetType> : MonoBehaviour
         return obj;
     }
 
-    string GetFilePath() { return Application.persistentDataPath + "/persistence/" + typeof(TargetType) + "-" + GetUUID(); }
+    string GetFilePath() { return Application.persistentDataPath + "/persistence/" + typeof(TargetType) + "-" + GetUUID() + ".json"; }
 
     string GenerateUUID()
     {
-        /*DateTime currentTime = DateTime.Now;
-        long unixTime = ((DateTimeOffset)currentTime).ToUnixTimeSeconds();
-        UnityEngine.Random.InitState((int)unixTime);
-        UnityEngine.Random*/
-
         float r = UnityEngine.Random.Range(0f, 1f);
         long ID = (long)(long.MaxValue * r);
         return ID + "";

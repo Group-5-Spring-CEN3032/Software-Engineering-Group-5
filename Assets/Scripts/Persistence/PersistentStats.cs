@@ -27,12 +27,12 @@ public class PersistentStats : PersistentClass<PersistentStatsData>
 
 public class PersistentStatsData
 {
-    public float health;
-    public float maxHealth;
-    public float mana;
-    public float maxMana;
-    public float stamina;
-    public float maxStamina;
+    public float health = 100f;
+    public float maxHealth = 100f;
+    public float mana = 100f;
+    public float maxMana = 100f;
+    public float stamina = 100f;
+    public float maxStamina = 100f;
 
     public PersistentStatsData(Stats s)
     {
