@@ -10,17 +10,20 @@ public class PersistentStats : PersistentClass<PersistentStatsData>
 
     void Awake()
     {
+        GetUUID();
         s = GetComponent<Stats>();   
     }
 
     void OnEnable()
     {
+        if (!Application.isPlaying) return;
         PersistentStatsData d = Deserialize();
         if (d != null) d.Apply(s);
     }
 
     void OnDisable()
     {
+        if (!Application.isPlaying) return;
         Serialize(new PersistentStatsData(s));
     }
 }

@@ -3,14 +3,21 @@ using UnityEngine;
 public class PersistentTransform : PersistentClass<TransformStruct>
 {
 
+    void Awake()
+    {
+        GetUUID();
+    }
+
     void OnEnable()
     {
+        if (!Application.isPlaying) return;
         TransformStruct t = Deserialize();
         if (t != null) t.Apply(transform);
     }
 
     void OnDisable()
     {
+        if (!Application.isPlaying) return;
         Serialize(new TransformStruct(transform));
     }
 }

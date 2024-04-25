@@ -734,6 +734,8 @@ GameObject:
   - component: {fileID: 6194305186135664969}
   - component: {fileID: 5860316856691990241}
   - component: {fileID: 4642902624440072459}
+  - component: {fileID: 3372006396804406441}
+  - component: {fileID: 6604142941465644585}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -846,9 +848,9 @@ MonoBehaviour:
   cameraAxis: {fileID: 4921816178964685390}
   mouseSensitivity: {x: 1, y: -0.5}
   degreesPerSecondLookSpeed: 1200
-  maxAngle: 75
-  minAngle: -75
-  offset: 90
+  maxCameraAngle: 40
+  minCameraAngle: -40
+  cameraAngleOffset: 90
   movementMult: 10
   jumpForce: 10
   timeBetweenJumps: 0.1
@@ -914,6 +916,32 @@ MonoBehaviour:
   stamina: 100
   maxStamina: 100
   attackPower: 0
+--- !u!114 &3372006396804406441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689324383382203857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3487f01f142a1ea43bf1086c372338c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 2601606689283112960
+--- !u!114 &6604142941465644585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689324383382203857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9149613f9bb63544fb56cc69f9ab4353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 4550644981143961600
 --- !u!1 &4875236024099171919
 GameObject:
   m_ObjectHideFlags: 0
