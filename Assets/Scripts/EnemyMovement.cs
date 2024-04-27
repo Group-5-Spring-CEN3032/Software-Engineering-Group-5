@@ -21,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform; 
         myAgent = GetComponent<NavMeshAgent>();
+        centrePoint = GameObject.Find("CentrePoint").transform;
     }
 
     // FixedUpdate is called every physics iteration
