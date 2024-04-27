@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour
     private BarUI bar;
     private Stats stats;
     [SerializeField]
-    bool healthbarVisibility;
+    public bool healthbarVisibility;
     
 
     // Start is called before the first frame update

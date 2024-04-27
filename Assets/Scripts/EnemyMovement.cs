@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,10 +11,11 @@ public class EnemyMovement : MonoBehaviour
     public MovementState state;
     private NavMeshAgent myAgent;
     public float range;
-
     public Transform centrePoint;
-
     private Transform playerTransform;
+    private MovementState originalState;
+    private bool healthbarVisibility;
+    private Attacking attacking;
 
 
     // Start is called before the first frame update
@@ -21,6 +23,9 @@ public class EnemyMovement : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform; 
         myAgent = GetComponent<NavMeshAgent>();
+        originalState = state;
+        healthbarVisibility = GetComponent<NPC>().healthbarVisibility;
+        attacking = GetComponentInChildren<Attacking>();
     }
 
     // FixedUpdate is called every physics iteration
@@ -60,4 +65,24 @@ public class EnemyMovement : MonoBehaviour
         return false;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (GetComponent<Collider>().GetType() == typeof(CapsuleCollider) && healthbarVisibility == true)
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                state = MovementState.Following;
+                attacking.enemyAttcking = true;
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            state = originalState;
+            attacking.enemyAttcking = false;
+        }
+    }
 }

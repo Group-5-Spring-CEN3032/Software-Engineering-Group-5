@@ -15,6 +15,7 @@ public class Attacking : MonoBehaviour
     [SerializeField]
     private float targetTime;
     private float time;
+    public bool enemyAttcking;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,12 @@ public class Attacking : MonoBehaviour
 
         if (targetTime <= 0.0f)
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && this.transform.parent.parent.gameObject.tag == "Player")
+            {
+                LaunchProjectile();
+                targetTime = time;
+            }
+            else if(enemyAttcking == true)
             {
                 LaunchProjectile();
                 targetTime = time;
