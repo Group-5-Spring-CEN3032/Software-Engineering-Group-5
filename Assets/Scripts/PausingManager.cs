@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
 
 public static class PausingManager
 {
@@ -22,7 +22,7 @@ public static class PausingManager
     public static void Unpause()
     {
         Time.timeScale = 1f;
-        onUnpauseCallback();
+        if (onUnpauseCallback != null) onUnpauseCallback();
     }
 
     public static void TogglePause()
