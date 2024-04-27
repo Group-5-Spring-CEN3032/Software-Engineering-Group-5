@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdee8d313d441fa4d9f2545f33e1b80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbarVisibility: 0
+  healthbarVisibility: 1
 --- !u!135 &6824047026663042515
 SphereCollider:
   m_ObjectHideFlags: 0
