@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class Player : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private BarUI bar, bar2, bar3;
     private Stats stats;
-    
+
     void Start()
     {
         stats = GetComponent<Stats>();
@@ -26,22 +28,32 @@ public class Player : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(Input.GetKeyDown("f"))
-        {
-            float num = 20f;
-            stats.SetStat(num, "health", bar);
-        }
-
-        if(Input.GetKeyDown("g"))
+        if (Input.GetKeyDown("g"))
         {
             float num = 20f;
             stats.SetStat(num, "mana", bar2);
         }
 
-        if(Input.GetKeyDown("h"))
+        if (Input.GetKeyDown("h"))
         {
             float num = 20f;
             stats.SetStat(num, "stamina", bar3);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        stats.SetStat(damage, "health", bar);
+
+        if (stats.Health <= 0)
+        {
+            StartCoroutine(LoadScenesWithDelay("Death", 1f));
+        }
+    }
+
+    private IEnumerator LoadScenesWithDelay(string firstSceneName, float firstSceneDelay)
+    {
+        SceneManager.LoadScene(firstSceneName);
+        yield return new WaitForSeconds(firstSceneDelay);
     }
 }

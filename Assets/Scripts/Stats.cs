@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour
     /// variables that are need
     /// set these variables in the unity engine
     /// </summary>
+    [SerializeField]
     private float health, maxHealth, mana, maxMana, stamina, maxStamina, attackPower;
 
     /// <summary>

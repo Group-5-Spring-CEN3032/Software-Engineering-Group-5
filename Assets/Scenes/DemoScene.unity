@@ -4098,6 +4098,10 @@ PrefabInstance:
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5540632913378161682, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: attackPower
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7060196989782407592, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
       propertyPath: m_Name
       value: StillEnemy
@@ -4425,6 +4429,10 @@ PrefabInstance:
       propertyPath: visibility
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4683993565834765745, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: healthbarVisibility
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1583552610682428408, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
       propertyPath: m_Speed
       value: 2
@@ -4469,6 +4477,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3801978865734693942, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 1633150019}
+    - target: {fileID: 3801978865734693942, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5647634506299295627, guid: fd3ca5ae50663f642be108368b0a7515, type: 3}
     - target: {fileID: 4855476074888748095, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
       propertyPath: range
       value: 0
@@ -4481,9 +4497,37 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5540632913378161682, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540632913378161682, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: maxHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540632913378161682, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: attackPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831798489139749628, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831798489139749628, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831798489139749628, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7060196989782407592, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
       propertyPath: m_Name
       value: FollowingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539418231326615451, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: m_Name
+      value: FirePosition
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5676,6 +5720,14 @@ PrefabInstance:
       value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4642902624440072459, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642902624440072459, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642902624440072459, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
       propertyPath: attackPower
       value: 10
       objectReference: {fileID: 0}
@@ -5726,6 +5778,10 @@ PrefabInstance:
     - target: {fileID: 7713781206298884895, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
       propertyPath: valueOnPause
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030786016643627052, guid: 27ca4284912d8984a923b15190d986bc, type: 3}
+      propertyPath: movementMult
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7851,6 +7907,10 @@ PrefabInstance:
       propertyPath: visibility
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4683993565834765745, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: healthbarVisibility
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2638174153986130709, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.4
@@ -7895,6 +7955,10 @@ PrefabInstance:
       propertyPath: centrePoint
       value: 
       objectReference: {fileID: 378674514}
+    - target: {fileID: 5540632913378161682, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
+      propertyPath: attackPower
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7060196989782407592, guid: 770e57d0e6009d240b115901ae325cd0, type: 3}
       propertyPath: m_Name
       value: MovementEnemy
