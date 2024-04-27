@@ -26,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
         originalState = state;
         healthbarVisibility = GetComponent<NPC>().healthbarVisibility;
         attacking = GetComponentInChildren<Attacking>();
+        centrePoint = GameObject.Find("CentrePoint").transform;
     }
 
     // FixedUpdate is called every physics iteration

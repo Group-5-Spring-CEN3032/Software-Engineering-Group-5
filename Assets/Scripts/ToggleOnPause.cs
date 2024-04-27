@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ToggleOnPause : MonoBehaviour
 {
-    public bool valueOnPause = true;
+    [SerializeField] private bool valueOnPause = true;
 
     
     void Start()
@@ -16,9 +16,7 @@ public class ToggleOnPause : MonoBehaviour
         PausingManager.onPauseCallback += OnPause;
         PausingManager.onUnpauseCallback += OnUnpause;
 
-        //Sets the object to it's correct state as of this moment
-        if (PausingManager.isPaused()) { OnPause(); }
-        else { OnUnpause(); }
+        SetValueOnPause(valueOnPause);
     }
 
     //Destructor to remove callbacks
@@ -38,4 +36,11 @@ public class ToggleOnPause : MonoBehaviour
         gameObject.SetActive(!valueOnPause);
     }
 
+    public void SetValueOnPause(bool newValue)
+    {
+        // Sets the object to it's correct state as of this moment
+        if (PausingManager.isPaused()) { OnPause(); }
+        else { OnUnpause(); }
+    }
+    public bool GetValueOnPause() { return valueOnPause; }
 }
