@@ -31,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
     // FixedUpdate is called every physics iteration
     void FixedUpdate()
     {
+        if (!myAgent.isOnNavMesh) return;
         if (state == MovementState.Random)
         {
             if (myAgent.remainingDistance <= myAgent.stoppingDistance)
