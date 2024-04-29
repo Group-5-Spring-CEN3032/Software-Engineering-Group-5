@@ -491,6 +491,8 @@ GameObject:
   - component: {fileID: 5540632913378161682}
   - component: {fileID: -4683993565834765745}
   - component: {fileID: 6824047026663042515}
+  - component: {fileID: 282166938793794799}
+  - component: {fileID: 7880220091873410232}
   m_Layer: 0
   m_Name: MovementEnemy
   m_TagString: Untagged
@@ -677,6 +679,32 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &282166938793794799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060196989782407592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9149613f9bb63544fb56cc69f9ab4353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 
+--- !u!114 &7880220091873410232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060196989782407592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3487f01f142a1ea43bf1086c372338c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 
 --- !u!1 &7539418231326615451
 GameObject:
   m_ObjectHideFlags: 0
